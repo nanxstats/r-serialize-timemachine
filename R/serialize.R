@@ -46,4 +46,6 @@ serialize_versioned <- function(installer, version, dir_output = "output/", ...)
 
   # Clean up -------------------------------------------------------------------
   fs::dir_delete(output)
+
+  invisible(NULL)
 }
