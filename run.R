@@ -1,6 +1,7 @@
-source("utils.R")
-source("download.R")
-source("extract.R")
+source("R/utils.R")
+source("R/download.R")
+source("R/extract.R")
+source("R/serialize.R")
 
 installer <- download_r_installer()
 
