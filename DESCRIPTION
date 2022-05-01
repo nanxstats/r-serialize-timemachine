@@ -9,4 +9,7 @@ Encoding: UTF-8
 Imports:
     rvest,
     curl,
-    fs
+    fs,
+    stringr,
+    htmltools,
+    knitr

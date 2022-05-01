@@ -18,8 +18,16 @@ Install `innoextract` under Windows, for example, using Chocolatey:
 choco install innoextract
 ```
 
-## Reproduce the results
+## Reproducing the results
+
+Run serialization:
 
 ```r
 source("run.R")
+```
+
+Summarize the results in a table:
+
+```r
+source("table.R")
 ```
