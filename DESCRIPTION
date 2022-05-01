@@ -1,0 +1,12 @@
+Package: r.serialize.timemachine
+Title: Running Serialization on Multiple R Versions
+Version: 0.1.0
+Authors@R: c(
+    person("Nan", "Xiao", email = "hello@nanx.me", role = c("aut", "cre"))
+    )
+URL: https://github.com/nanxstats/r-serialize-timemachine
+Encoding: UTF-8
+Imports:
+    rvest,
+    curl,
+    fs
