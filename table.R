@@ -14,12 +14,10 @@ hex <- rep(NA, k)
 for (i in seq_len(k)) hex[i] <- paste(readbin_to_char(rds[i]), collapse = " ")
 df <- data.frame("version" = version, "hex" = hex)
 
-htmltools::browsable(
-  htmltools::HTML(
-    knitr::kable(
-      df,
-      format = "html",
-      col.names = c("R Version", "Hex value of serialized \"ABCDEF\"")
-    )
+print(htmltools::browsable(htmltools::HTML(
+  knitr::kable(
+    df,
+    format = "html",
+    col.names = c("R Version", "Hex value of serialized \"ABCDEF\"")
   )
-)
+)))
