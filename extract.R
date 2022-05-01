@@ -28,8 +28,9 @@ serialize_versioned <- function(installer, version, dir_output = "output/", ...)
   # Prepare payload files ------------------------------------------------------
   path_rds <- normalizePath(dir_output, winslash = "/")
 
-  payload_nodot <- paste0('saveRDS("ABCDEF", file = paste(', "\"", path_rds, '/R-", paste(R.version$major, R.version$minor, sep = "."), ".rds", sep = ""))')
-  payload_dot <- paste0('.saveRDS("ABCDEF", file = paste(', "\"", path_rds, '/R-", paste(R.version$major, R.version$minor, sep = "."), ".rds", sep = ""))')
+  # R >= 2.4.0 switched the default to `compress = TRUE` so set it to FALSE here
+  payload_nodot <- paste0('saveRDS("ABCDEF", compress = FALSE, file = paste(', "\"", path_rds, '/R-", paste(R.version$major, R.version$minor, sep = "."), ".rds", sep = ""))')
+  payload_dot <- paste0('.saveRDS("ABCDEF", compress = FALSE, file = paste(', "\"", path_rds, '/R-", paste(R.version$major, R.version$minor, sep = "."), ".rds", sep = ""))')
 
   writeLines(payload_dot, "payload-dot.R")
   writeLines(payload_nodot, "payload-nodot.R")
